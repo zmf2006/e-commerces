@@ -30,8 +30,8 @@ public class PinpaiImpl implements Pinpaiservice {
         Integer integer = pinpaiMapper.queryCount(vo);
         rs.put("count",integer);
         //查询分页数据
-        List<Book> books = pinpaiMapper.queryDataByParams(vo);
-        rs.put("list",books);
+        List<Pinpai> Pinpais = pinpaiMapper.queryDataByParams(vo);
+        rs.put("list",Pinpais);
         return rs;
     }
 

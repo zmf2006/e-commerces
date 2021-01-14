@@ -1,6 +1,10 @@
 package com.fh.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.xml.crypto.Data;
+import java.util.Date;
 
 /**
  * @author huangp
@@ -13,10 +17,14 @@ public class Pinpai {
     private String bandE;// 首字母
     private String imgpath;//图片log
     private String bandDesc;//品牌介绍
-    private Integer ord ;//排序字段
-    private Integer isdel  ;//逻辑删除
-    private Data createDate ;//创建时间
-    private Data updateDate ;//时修改时间
+    private Integer ord;//排序字段
+    private Integer isdel;//逻辑删除
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    private Date createDate;//创建时间
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    private Date updateDate;//时修改时间
     private String author;//操作人
 
     public Integer getId() {
@@ -75,19 +83,19 @@ public class Pinpai {
         this.isdel = isdel;
     }
 
-    public Data getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Data createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
-    public Data getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(Data updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 

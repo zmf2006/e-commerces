@@ -10,6 +10,7 @@ public class Classify {
     private  Integer id;/*主键*/
     private  String name;/*分类名称*/
     private  Integer pid;/*上级ID*/
+
     private Data createDate;/*新建时间*/
     private  Data updateDate;/*修改时间*/
     private  Integer isDel;/*是否删除*/

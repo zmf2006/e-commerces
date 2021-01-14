@@ -15,7 +15,7 @@ public interface PinpaiMapper {
 
     Integer queryCount(BookParamsVO vo);
 
-    List<Book> queryDataByParams(BookParamsVO vo);
+    List<Pinpai> queryDataByParams(BookParamsVO vo);
 
     void addBook(Pinpai pinpai);
 

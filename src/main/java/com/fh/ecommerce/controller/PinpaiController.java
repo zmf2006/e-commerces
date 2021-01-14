@@ -142,9 +142,9 @@ http://localhost:8080/api/pinpai/delect
     *
     * */
     @PostMapping("delect")
-    public CommonsReturn delect(Integer id){
+    public CommonsReturn delect(Integer Id){
         try {
-            pinpaiservice.delect(id);
+            pinpaiservice.delect(Id);
             return CommonsReturn.success();
         } catch (Exception e) {
             e.printStackTrace();

@@ -13,11 +13,11 @@
 
     </select>
     <select id="queryDataByParams" resultType="com.fh.ecommerce.model.Pinpai" parameterType="com.fh.ecommerce.uitl.BookParamsVO" >
-        select * from t_pinpai where isDel=0
+        select *  from t_pinpai  where isDel=0
         <if test="name!=null and name!=''">
             and name=#{name}
         </if>
-            order by ord;
+            order by ord desc;
     </select>
     <insert id="addBook" parameterType="com.fh.ecommerce.model.Pinpai">
 insert into t_pinpai (name,bandE,imgpath,bandDesc,ord,isdel,createDate,updateDate,author) value
