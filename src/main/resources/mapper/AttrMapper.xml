@@ -29,4 +29,7 @@ update  t_attribute set name=#{name} ,nameCH=#{nameCH},typeId=#{typeId} ,type=#{
 where id=#{id}
 
     </update>
+    <update id="delect" parameterType="java.lang.Integer">
+        update  t_attribute set isdel=1 where id=#{id}
+    </update>
 </mapper>

@@ -43,6 +43,14 @@ if(attribute.getIsDel()==null){
 
     @Override
     public void update(Attribute attribute) {
+        if(attribute.getIsDel()==null){
+            attribute.setIsDel(0);
+        }
         attributeMapper.update(attribute);
+    }
+
+    @Override
+    public void delect(Integer id) {
+        attributeMapper.delect(id);
     }
 }

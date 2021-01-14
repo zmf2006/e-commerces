@@ -17,4 +17,6 @@ public interface AttributeMapper {
     void addBook(Attribute attribute);
 
     void update(Attribute attribute);
+
+    void delect(Integer id);
 }

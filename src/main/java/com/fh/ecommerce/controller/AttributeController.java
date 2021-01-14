@@ -66,4 +66,15 @@ public class AttributeController {
         }
 
     }
+    @PostMapping("delect")
+    public CommonsReturn delect(Integer Id){
+        try {
+            attributeService.delect(Id);
+            return CommonsReturn.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return CommonsReturn.error();
+        }
+
+    }
 }
