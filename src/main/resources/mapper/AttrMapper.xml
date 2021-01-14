@@ -18,5 +18,9 @@
             and name=#{name}
         </if>
     </select>
+    <insert id="addBook" parameterType="com.fh.ecommerce.model.Attribute">
+insert into t_attribute (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value
+(#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},SYSDATE(),SYSDATE(),#{author})
+    </insert>
 
 </mapper>

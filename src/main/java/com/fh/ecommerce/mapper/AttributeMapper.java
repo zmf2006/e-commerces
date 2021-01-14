@@ -13,4 +13,6 @@ public interface AttributeMapper {
     Integer queryCount(BookParamsVO vo);
 
     List<Attribute> queryDataByParams(BookParamsVO vo);
+
+    void addBook(Attribute attribute);
 }

@@ -1,5 +1,7 @@
 package com.fh.ecommerce.controller;
 
+import com.fh.ecommerce.model.Attribute;
+import com.fh.ecommerce.model.Pinpai;
 import com.fh.ecommerce.service.AttributeService;
 import com.fh.ecommerce.uitl.BookParamsVO;
 import com.fh.ecommerce.uitl.CommonsReturn;
@@ -40,5 +42,14 @@ public class AttributeController {
             return CommonsReturn.error("查询失败");
         }
 
+    }
+    @PostMapping("add")
+    public CommonsReturn add(Attribute attribute){
+        if(attribute.getId()!=null){
+            return CommonsReturn.error("不需要id");
+        }
+        attributeService.add(attribute);
+
+        return CommonsReturn.success();
     }
 }

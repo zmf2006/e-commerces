@@ -32,4 +32,12 @@ public class AttributeServiceImpl implements AttributeService {
         rs.put("list",Pinpais);
         return rs;
     }
+
+    @Override
+    public void add(Attribute attribute) {
+if(attribute.getIsDel()==null){
+    attribute.setIsDel(0);
+        }
+        attributeMapper.addBook(attribute);
+    }
 }
