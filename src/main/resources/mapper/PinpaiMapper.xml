@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.ecommerce.mapper.PinpaiMapper">
+
+    <select id="queryCount" resultType="java.lang.Integer" parameterType="com.fh.ecommerce.uitl.BookParamsVO" >
+        select COUNT(*) from t_pinpai where isDel=0
+        <if test="name!=null and name!=''">
+            and name=#{name}
+        </if>
+
+    </select>
+    <select id="queryDataByParams" resultType="com.fh.ecommerce.model.Pinpai" parameterType="com.fh.ecommerce.uitl.BookParamsVO" >
+        select * from t_pinpai where isDel=0
+        <if test="name!=null and name!=''">
+            and name=#{name}
+        </if>
+            order by ord;
+    </select>
+    <insert id="addBook" parameterType="com.fh.ecommerce.model.Pinpai">
+insert into t_pinpai (name,bandE,imgpath,bandDesc,ord,isdel,createDate,updateDate,author) value
+(#{name},#{bandE},#{imgpath},#{bandDesc},#{ord},#{isdel},SYSDATE(),SYSDATE(),#{author})
+    </insert>
+    <select id="querybyid" parameterType="com.fh.ecommerce.model.Pinpai" resultType="com.fh.ecommerce.model.Pinpai">
+        select *from t_pinpai where  id=#{id}
+
+    </select>
+    <update id="update" parameterType="com.fh.ecommerce.model.Pinpai" >
+
+update  t_pinpai set name=#{name} ,bandE=#{bandE},imgpath=#{imgpath} ,bandDesc=#{bandDesc} ,imgpath=#{imgpath}
+,ord=#{ord} ,isdel=#{isdel} ,author=#{author} ,updateDate=SYSDATE()
+where id=#{id}
+
+    </update>
+    <update id="delect" parameterType="java.lang.Integer">
+        update  t_pinpai set isdel=1 where id=#{id}
+    </update>
+</mapper>
