@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.ecommerce.mapper.AttributeMapper">
+
+    <select id="queryCount" resultType="java.lang.Integer" parameterType="com.fh.ecommerce.uitl.BookParamsVO" >
+        select COUNT(*) from t_attribute where isDel=0
+        <if test="name!=null and name!=''">
+            and name=#{name}
+        </if>
+
+    </select>
+    <select id="queryDataByParams" resultType="com.fh.ecommerce.model.Pinpai" parameterType="com.fh.ecommerce.uitl.BookParamsVO" >
+        select *  from t_attribute  where isDel=0
+        <if test="name!=null and name!=''">
+            and name=#{name}
+        </if>
+    </select>
+
+</mapper>
