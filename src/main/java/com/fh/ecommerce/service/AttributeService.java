@@ -13,4 +13,6 @@ public interface AttributeService {
     Map quest(BookParamsVO bookParamsVO);
 
     void add(Attribute attribute);
+
+    void update(Attribute attribute);
 }

@@ -40,4 +40,9 @@ if(attribute.getIsDel()==null){
         }
         attributeMapper.addBook(attribute);
     }
+
+    @Override
+    public void update(Attribute attribute) {
+        attributeMapper.update(attribute);
+    }
 }

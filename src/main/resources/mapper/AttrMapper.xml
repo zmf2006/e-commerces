@@ -22,5 +22,11 @@
 insert into t_attribute (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value
 (#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},SYSDATE(),SYSDATE(),#{author})
     </insert>
+    <update id="update" parameterType="com.fh.ecommerce.model.Attribute" >
 
+update  t_attribute set name=#{name} ,nameCH=#{nameCH},typeId=#{typeId} ,type=#{type} ,isSKU=#{isSKU}
+,isDel=#{isDel} ,author=#{author} ,updateDate=SYSDATE()
+where id=#{id}
+
+    </update>
 </mapper>

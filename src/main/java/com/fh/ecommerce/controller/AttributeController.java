@@ -52,4 +52,18 @@ public class AttributeController {
 
         return CommonsReturn.success();
     }
+    @PostMapping("update")
+    public CommonsReturn update(Attribute attribute){
+        if(attribute.getId()==null){
+            return CommonsReturn.error("没有id");
+        }
+        try {
+            attributeService.update(attribute);
+            return CommonsReturn.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return CommonsReturn.error();
+        }
+
+    }
 }

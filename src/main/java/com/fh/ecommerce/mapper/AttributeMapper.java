@@ -15,4 +15,6 @@ public interface AttributeMapper {
     List<Attribute> queryDataByParams(BookParamsVO vo);
 
     void addBook(Attribute attribute);
+
+    void update(Attribute attribute);
 }
