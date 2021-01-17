@@ -14,8 +14,8 @@ select *from t_class
 </select>
 
     <!--查询指定pid的数据  -->
-    <select id="queryDeptbypid" resultType="com.fh.ecommerce.model.Classify" parameterType="java.lang.Integer">
-select *from t_class where pid =#{pids}
+    <select id="queryDeptbypid" resultType="com.fh.ecommerce.model.Classify" >
+select *from t_class
 </select>
     <!--新增-->
     <insert id="add"  useGeneratedKeys="true" keyProperty="id" parameterType="com.fh.ecommerce.model.Classify">

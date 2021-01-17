@@ -12,7 +12,7 @@ import java.util.List;
 public interface ClassifyService {
 
 
-    List<Classify> queryDeptbypid(Integer pid);
+    List<Classify> queryDeptbypid();
 
     Integer add(Classify classify);
 

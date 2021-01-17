@@ -15,7 +15,7 @@ public interface ClassifyMapper {
 
 
 
-    List<Classify> queryDeptbypid(Integer pid);
+    List<Classify> queryDeptbypid();
 
 
     void add(Classify classify);

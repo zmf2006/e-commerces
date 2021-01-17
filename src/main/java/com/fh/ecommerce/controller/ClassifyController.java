@@ -38,10 +38,10 @@ public class ClassifyController {
 
     }
 @GetMapping("getDataByPid")
-    public Map getDataByPid(Integer Pid){
+    public Map getDataByPid(){
     Map map = new HashMap();
     try {
-        List<Classify> ss =classifyService.queryDeptbypid(Pid);
+        List<Classify> ss =classifyService.queryDeptbypid();
         map.put("code",200);
         map.put("message","查询成功");
         map.put("data",ss);

@@ -3,6 +3,7 @@ package com.fh.ecommerce.service.impl;
 import com.fh.ecommerce.mapper.AttributeMapper;
 import com.fh.ecommerce.model.Attribute;
 import com.fh.ecommerce.model.Pinpai;
+import com.fh.ecommerce.model.PinpaiAndAtrr;
 import com.fh.ecommerce.service.AttributeService;
 import com.fh.ecommerce.uitl.BookParamsVO;
 import org.springframework.stereotype.Service;
@@ -28,7 +29,7 @@ public class AttributeServiceImpl implements AttributeService {
         Integer integer = attributeMapper.queryCount(vo);
         rs.put("count",integer);
         //查询分页数据
-        List<Attribute> Pinpais = attributeMapper.queryDataByParams(vo);
+        List<PinpaiAndAtrr> Pinpais = attributeMapper.queryDataByParams(vo);
         rs.put("list",Pinpais);
         return rs;
     }

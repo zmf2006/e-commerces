@@ -22,8 +22,8 @@ public class ClassifyServiceImpl implements ClassifyService {
 
 
     @Override
-    public List<Classify> queryDeptbypid(Integer pid) {
-        return classifyMapper. queryDeptbypid( pid);
+    public List<Classify> queryDeptbypid() {
+        return classifyMapper. queryDeptbypid();
     }
 
     @Override

@@ -5,10 +5,7 @@ import com.fh.ecommerce.model.Pinpai;
 import com.fh.ecommerce.service.AttributeService;
 import com.fh.ecommerce.uitl.BookParamsVO;
 import com.fh.ecommerce.uitl.CommonsReturn;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -23,7 +20,7 @@ import java.util.Map;
 public class AttributeController {
     @Resource
     private AttributeService attributeService;
-    @PostMapping("gettable")
+    @GetMapping("gettable")
     public CommonsReturn gettable(BookParamsVO bookParamsVO){
         if(bookParamsVO.getCurrPage()==null){
             return CommonsReturn.error("非法请求");
@@ -66,7 +63,7 @@ public class AttributeController {
         }
 
     }
-    @PostMapping("delect")
+    @DeleteMapping("delect")
     public CommonsReturn delect(Integer Id){
         try {
             attributeService.delect(Id);

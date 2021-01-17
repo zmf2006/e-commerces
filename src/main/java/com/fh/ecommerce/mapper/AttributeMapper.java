@@ -1,6 +1,7 @@
 package com.fh.ecommerce.mapper;
 
 import com.fh.ecommerce.model.Attribute;
+import com.fh.ecommerce.model.PinpaiAndAtrr;
 import com.fh.ecommerce.uitl.BookParamsVO;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 public interface AttributeMapper {
     Integer queryCount(BookParamsVO vo);
 
-    List<Attribute> queryDataByParams(BookParamsVO vo);
+    List<PinpaiAndAtrr> queryDataByParams(BookParamsVO vo);
 
     void addBook(Attribute attribute);
 
