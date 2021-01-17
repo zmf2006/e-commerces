@@ -1,4 +1,4 @@
-package com.fh.ecommerce.controller;
+package com.fh.ecommerce.uitl;
 
 
 import com.aliyun.oss.OSS;

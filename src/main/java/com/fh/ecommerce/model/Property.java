@@ -1,38 +1,28 @@
 package com.fh.ecommerce.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.Date;
 
-/**
- * @author huangp
- * @create 2021-01-14 20:41
- */
-public class Attribute {
+public class Property {
     private Integer id;
 
-    private String name;
+    private String name;  //属性名   color
 
-    private String nameCH;
+    private  String nameCH;//属性中文名   颜色
 
-    private Integer typeId;
+    private Integer typeId;   //分类的主键
 
-    private Integer  type;
+    private Integer type;     //属性的类型    0 下拉框     1 单选框      2  复选框   3  输入框
 
-    private Integer isSKU;
+    private Integer isSKU; // 是否为sku属性
 
-    private  Integer isDel;
+    private Integer isDel;  // 逻辑删除
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createDate;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date updateDate;
 
     private String author;
+
 
     public Integer getId() {
         return id;
