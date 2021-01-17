@@ -1,6 +1,7 @@
 package com.fh.ecommerce.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,6 +17,7 @@ import java.util.Map;
  * @author huangp
  * @create 2020-11-03 19:33
  */
+@CrossOrigin
 @RequestMapping("/uploadFile")
 @Controller
 public class UploadFileController {
